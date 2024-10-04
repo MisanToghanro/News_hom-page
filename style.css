@@ -1,0 +1,134 @@
+
+body{
+    font: bold;
+    padding: 20px;
+    font-family: "Inter", sans-serif;
+    font-optical-sizing: auto;
+    font-weight: 300;
+    font-style: normal;
+
+}
+header {
+    padding: 40px 20px;
+    display: flex;
+
+    justify-content: space-between;
+}
+
+.nav ul{
+    display: flex;
+}
+.nav li{
+list-style: none;
+}
+.nav a{
+    padding: 0 10px;
+    text-decoration: none;
+    color: grey;
+    position: relative;
+
+}
+.nav a::after{
+    content: "";
+    position: absolute;
+    width: 0;
+    height: 2px;
+    background-color: black;
+    left: 0;
+    bottom: -4px;
+    transition: width 0.3s ease;
+}
+.nav a:hover::after{
+width: 100%;
+}
+.wrapper{
+display: flex;
+gap: 30px;
+}
+.new{
+    color: goldenrod;
+}
+.img-one{
+    width: 100%;
+    height: auto;
+}
+.mini-section{
+    display: flex;
+}
+.section-two{
+    background-color: rgb(27, 12, 45);
+    color: white;
+    padding: 20px;
+}
+
+button{
+    background-color: orangered;
+    font-weight: bold;
+    padding:10px 20px;
+    cursor: pointer;
+    border: none;
+    transition: background-color 0.3s ease; /* Smooth transition */
+}
+button:hover{
+    background-color: darkorange; /* Change background on hover */
+    color: black; 
+}
+.section-three{
+    display: flex;
+    justify-content: center;
+    padding-top:  40px;
+}
+.mini-section-2, .mini-section-3, .mini-section-4 {
+    display: flex;
+    align-items: center; /* Aligns the image and text vertically in the middle */
+    gap: 15px; /* Adds space between the image and the text */
+}
+
+.mini-section-2 img, .mini-section-3 img, .mini-section-4 img {
+    width: 100px; /* Adjust image size */
+    height: auto;
+}
+.mini-section-2 h3, .mini-section-3 h3, .mini-section-4 h3{
+    color: orangered;
+}
+.menu{
+    display: none;
+    font-size: 30px;
+    cursor: pointer;
+}
+
+
+@media (max-width:768px){
+     .nav ul{
+        display: none;
+        flex-direction: column;
+        background-color: rgb(27, 12, 45);
+        width: 100%;
+        position: absolute;
+        top:90px;
+        right: 0;
+        padding: 5px;
+     }
+     .menu{
+        display: block;
+     }
+     .nav-active ul{
+       display: flex;
+     }
+    .section-three{
+      display: block;
+    }
+
+    .wrapper{
+       display: block;
+    }
+    .img-one{
+        width: 100%;
+       
+    }
+    .mini-section{
+        flex-direction: column;
+        padding: 20px;
+        width: 100%;
+    }
+}
